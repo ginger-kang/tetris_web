@@ -39,7 +39,7 @@ const Tetris = () => {
 
   const movePlayer = (dir) => {
     if (!checkCollision(player, stage, { x: dir, y: 0 })) {
-      updatePlayerPos({ x: dir, y: 0 });
+      updatePlayerPos({ x: dir, y: 0, collided: false });
     }
   };
 
@@ -80,9 +80,9 @@ const Tetris = () => {
   };
 
   return (
-    <StyledTetrisWrapper role="button" tabIndex="0" onKeyDown={(e) => move(e)}>
+    <StyledTetrisWrapper role="button" onKeyDown={(e) => move(e)}>
       <StyledTetris>
-        <Stage stage={createStage()} />
+        <Stage stage={stage} />
         <aside>
           {gameOver ? (
             <Display gameOver={gameOver} text="Game Over" />
