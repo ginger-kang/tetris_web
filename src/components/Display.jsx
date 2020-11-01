@@ -1,11 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-interface dProps {
-  gameOver: string;
-}
-
-const StyledDisplay = styled.div<dProps>`
+const StyledDisplay = styled.div`
   box-sizing: border-box;
   display: flex;
   align-items: center;

@@ -3,12 +3,7 @@ import styled from "styled-components";
 
 import { TETROMINOS } from "../tetrominos";
 
-interface cProps {
-  type: any;
-  color: string;
-}
-
-const StyledCell = styled.div<cProps>`
+const StyledCell = styled.div`
   width: auto;
   background: rgba(${(props) => props.color}, 0.8);
   border: ${(props) => (props.type === 0 ? "0px solid" : "4px solid")};

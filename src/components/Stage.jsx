@@ -2,12 +2,7 @@ import React from "react";
 import Cell from "./Cell";
 import styled from "styled-components";
 
-interface sProps {
-  width: number;
-  height: number;
-}
-
-const StyledStage = styled.div<sProps>`
+const StyledStage = styled.div`
   display: grid;
   grid-template-rows: repeat(
     ${(props) => props.height},
